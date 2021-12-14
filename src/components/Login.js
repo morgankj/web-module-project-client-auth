@@ -14,7 +14,7 @@ class Login extends React.Component {
         axios.post("http://localhost:9000/api/login", this.state.credentials)
             .then(res => {
                 localStorage.setItem("token", res.data.token);
-                this.props.history.push("/friendsList");
+                this.props.history.push("/friends");
             })
             .catch(err => console.error(err));
     }
