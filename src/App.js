@@ -1,11 +1,21 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+
+import Navbar from './components/Navbar';
+import Login from './components/Login';
 
 function App() {
   return (
     <div className="App">
-      <h2>Client Auth Project</h2>
+      <Navbar />
+
+      <Switch>
+        <Route path="/logout" component={Login} />
+        <Route path="/friendlist" component={Login} />
+        <Route path="/login" component={Login} />
+        <Route path="/" component={Login} />
+      </Switch>
     </div>
   );
 }
