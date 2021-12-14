@@ -25,7 +25,6 @@ class FriendsList extends React.Component {
     }
 
     render() {
-        console.log(this.state.friends);
         return(
             <div>
                 <h1>FRIENDS LIST</h1>

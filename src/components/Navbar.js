@@ -9,7 +9,7 @@ class Navbar extends React.Component {
                 <div id="navs">
                     <Link to="/login" >LOGIN</Link>
                     <Link to="/friends" >FRIENDSLIST</Link>
-                    <Link to="/addfriend" >ADDFRIEND</Link>
+                    <Link to="/friends/add" >ADDFRIEND</Link>
                     <Link to="/logout" >LOGOUT</Link>
                 </div>
             </div>
