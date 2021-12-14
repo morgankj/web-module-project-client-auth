@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Login from './components/Login';
+import FriendsList from './components/FriendsList';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
 
       <Switch>
         <Route path="/logout" component={Login} />
-        <Route path="/friendlist" component={Login} />
+        <Route path="/friends" component={FriendsList} />
         <Route path="/login" component={Login} />
         <Route path="/" component={Login} />
       </Switch>
