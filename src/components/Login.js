@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 
 class Login extends React.Component {
     state = {
@@ -30,10 +31,10 @@ class Login extends React.Component {
 
     render() {
         return(
-            <div>
+            <StyledLogin>
                 <h1>LOGIN</h1>
-                <form onSubmit={this.login} >
-                    <label>USERNAME
+                <form onSubmit={this.login} className="loginPanels" >
+                    <label><p>USERNAME</p>
                         <input 
                             type="text"
                             name="username"
@@ -42,7 +43,7 @@ class Login extends React.Component {
                             onChange={this.handleChange}
                         />
                     </label>
-                    <label>PASSWORD
+                    <label><p>PASSWORD</p>
                         <input 
                             type="password"
                             name="password"
@@ -53,9 +54,23 @@ class Login extends React.Component {
                     </label>
                     <button>SUBMIT</button>
                 </form>
-            </div>
+            </StyledLogin>
         )
     }
 }
 
 export default Login;
+
+const StyledLogin = styled.div`
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 55%;
+        margin: auto;
+        text-align: left;
+    }
+    input {
+        background-color: black;
+        color: white;
+    }
+`
